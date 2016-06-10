@@ -1,1 +1,25 @@
 ﻿/* Place custom styles below */
+
+#sideNavBox {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 180px;
+}
+
+#contentBox {
+    margin-right: 20px;
+    margin-left: 220px;
+    -moz-min-width: 703px;
+    -ms-min-width: 703px;
+    -o-min-width: 703px;
+    -webkit-min-width: 703px;
+    min-width: 703px;
+}
+
+#s4-titlerow {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 19px;
+    padding-bottom: 8px;
+}

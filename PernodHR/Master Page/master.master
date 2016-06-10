@@ -1,0 +1,214 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Assembly Name="Microsoft.Web.CommandUI, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<SharePoint:SPHtmlTag dir="<%$Resources:wss,multipages_direction_dir_value%>" ID="SPHtmlTag" runat="server">
+    <head runat="server">
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <SharePoint:IECompatibleMetaTag runat="server" />
+        <meta http-equiv="Expires" content="0" />
+        <SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_layouts/15/images/SharePointMetroAppTile.png" TileColor="#0072C6" />
+        <!-- Page Title -->
+        <SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderPageTitle" runat="server">
+            </asp:ContentPlaceHolder>
+        </SharePoint:PageTitle>
+        <!-- Page Title End-->
+
+        <!-- Favicon -->
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/15/images/favicon.ico?rev=43" />
+        <!-- Favicon -->
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+    </head>
+    <body>
+        <SharePoint:ImageLink runat="server" />
+        <SharePoint:SPNoScript runat="server" />
+        <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+        <SharePoint:SharePointForm runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+            <SharePoint:AjaxDelta id="DeltaDelegateControls" runat="server">
+                <SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation" />
+                <SharePoint:DelegateControl ControlId="GlobalSiteLink3" Scope="Farm" runat="server" Visible="false" />
+            </SharePoint:AjaxDelta>
+
+            <a id="HiddenAnchor" href="javascript:;" style="display: none;"></a>
+            <!-- Top Menu -->
+            <SharePoint:AjaxDelta runat="server" id="suiteBarDelta" BlockElement="true" CssClass="ms-dialogHidden ms-fullWidth noindex">
+                <div id="suiteMenuData" class="ms-hide">
+                    <wssuc:Welcome id="IdWelcomeData" runat="server" EnableViewState="false" RenderDataOnly="true" />
+                    <span class="ms-siteactions-root" id="siteactiontd">
+                        <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>"
+                            id="SiteActionsMenuMainData"
+                            PrefixHtml=""
+                            SuffixHtml=""
+                            ImageUrl="/_layouts/15/images/spcommon.png?rev=43"
+                            ThemeKey="spcommon"
+                            MenuAlignment="Right"
+                            LargeIconMode="false">
+                            <customtemplate>
+						<SharePoint:Menu runat="server" Visible="false"/>
+						<SharePoint:FeatureMenuTemplate runat="server"
+							FeatureScope="Site"
+							Location="Microsoft.SharePoint.StandardMenu"
+							GroupId="SiteActions"
+							UseShortId="true">
+						  <SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreatePage"
+							  Text="<%$Resources:wss,siteactions_addpage15%>"
+							  Description="<%$Resources:wss,siteactions_createpagedesc%>"
+							  ImageUrl="/_layouts/15/images/NewContentPageHH.png?rev=43"
+							  MenuGroupId="200"
+							  Sequence="220"
+							  UseShortId="true"
+							  ClientOnClickScriptContainingPrefixedUrl="OpenCreateWebPageDialog('~siteLayouts/createwebpage.aspx')"
+							  PermissionsString="AddListItems, EditListItems"
+							  PermissionMode="All" />
+						  <SharePoint:MenuItemTemplate runat="server" id="MenuItem_SwitchToMobileView"
+							  Visible="false"
+							  Text="<%$Resources:wss,siteactions_switchtomobileview%>"
+							  Description="<%$Resources:wss,siteactions_switchtomobileviewdesc%>"
+							  MenuGroupId="300"
+							  Sequence="330"
+							  UseShortId="true"
+							  ClientOnClickScript="STSNavigate(StURLSetVar2(ajaxNavigate.get_href(), 'mobile', '1'));" />
+						</SharePoint:FeatureMenuTemplate>
+						</customtemplate>
+                        </SharePoint:SiteActions></span>
+                </div>
+            </SharePoint:AjaxDelta>
+            <!-- Top Menu End-->
+            <!-- Sub Menu -->
+            <div id="s4-ribbonrow">
+                <div id="globalNavBox" class="noindex">
+                    <div id="ribbonBox">
+                        <div id="s4-ribboncont">
+                        </div>
+                        <SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server">
+                            <asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </SharePoint:AjaxDelta>
+                    </div>
+                </div>
+            </div>
+            <!-- Sub Menu End-->
+            <div id="s4-workspace" class="ms-core-overlay">
+                <div id="s4-bodyContainer">
+                    <!-- Title & Site Icon -->
+                    <div id="s4-titlerow" class="ms-dialogHidden s4-titlerowhidetitle">
+                        <div id="titleAreaBox" class="ms-noList ms-table ms-core-tableNoSpace">
+                            <div id="titleAreaRow" class="ms-tableRow">
+                                <div id="siteIcon" class="ms-tableCell ms-verticalAlignTop">
+                                    <SharePoint:AjaxDelta id="DeltaSiteLogo" BlockElement="true" runat="server">
+                                        <SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" id="onetidProjectPropertyTitleGraphic">
+                                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/15/images/siteIcon.png?rev=43" runat="server" />
+                                        </SharePoint:SPSimpleSiteLink>
+                                    </SharePoint:AjaxDelta>
+                                </div>
+                                <div class="ms-breadcrumb-box ms-tableCell ms-verticalAlignTop">
+                                    <div class="ms-breadcrumb-top">
+                                        <SharePoint:AjaxDelta id="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation" role="navigation" runat="server">
+                                            <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
+                                                <template_controls>
+			                                        <asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/>
+                                                </template_controls>
+                                            </SharePoint:DelegateControl>
+                                            <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
+                                                <SharePoint:AspMenu
+                                                    ID="TopNavigationMenu"
+                                                    Runat="server"
+                                                    EnableViewState="false"
+                                                    DataSourceID="topSiteMap"
+                                                    AccessKey="<%$Resources:wss,navigation_accesskey%>"
+                                                    UseSimpleRendering="true"
+                                                    UseSeparateCss="false"
+                                                    Orientation="Horizontal"
+                                                    StaticDisplayLevels="2"
+                                                    AdjustForShowStartingNode="true"
+                                                    MaximumDynamicDisplayLevels="2"
+                                                    SkipLinkText="" />
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                    <h1 id="pageTitle" class="ms-core-pageTitle">
+                                        <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">
+                                                <h1 style="background: red;"></h1>
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                    </h1>
+                                </div>
+                                <div class="ms-tableCell ms-verticalAlignTop">
+                                    <SharePoint:AjaxDelta id="DeltaPlaceHolderGroupActionsArea" BlockElement="true" CssClass="ms-floatRight ms-noWrap" runat="server">
+                                        <SharePoint:DelegateControl runat="server" ControlId="GroupActionsTop" AllowMultipleControls="true" />
+                                    </SharePoint:AjaxDelta>
+                                </div>
+                                <div class="ms-tableCell ms-verticalAlignTop">
+                                    <SharePoint:AjaxDelta id="DeltaPlaceHolderSearchArea" BlockElement="true" CssClass="ms-mpSearchBox ms-floatRight" runat="server">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server">
+                                            <div id="searchInputBox">
+                                                <SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" />
+                                            </div>
+                                        </asp:ContentPlaceHolder>
+                                    </SharePoint:AjaxDelta>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Title & Site Icon End -->
+                    <!-- Body Content -->
+                    <div id="contentRow">
+                        <div id="sideNavBox" role="Navigation" class="ms-dialogHidden ms-forceWrap ms-noList">
+                            <SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
+                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                    <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchTop" />
+                                    <a id="startNavigation" name="startNavigation" tabindex="-1">Sample</a>
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                                    <div class="ms-core-sideNavBox-removeLeftMargin">
+                                    </div>
+                                </asp:ContentPlaceHolder>
+                            </SharePoint:AjaxDelta>
+                        </div>
+                        <div id="contentBox" aria-live="polite" aria-relevant="all" role="main">
+                            <SharePoint:AjaxDelta id="DeltaPlaceHolderMain" BlockElement="true" IsMainContent="true" runat="server">
+                                <a id="mainContent" name="mainContent" tabindex="-1"></a>
+                                <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                            </SharePoint:AjaxDelta>
+                        </div>
+
+                        <asp:ContentPlaceHolder ID="PlaceHolderSiteName" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarBorder" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigation" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigationSiteMap" runat="server" Visible="false" />
+                        <asp:ContentPlaceHolder ID="WSSDesignConsole" runat="server" Visible="false" />
+                    </div>
+                    <!-- Content End -->
+                </div>
+            </div>
+        </SharePoint:SharePointForm>
+    </body>
+</SharePoint:SPHtmlTag>
+

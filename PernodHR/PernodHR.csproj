@@ -47,19 +47,31 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{fbf092f7-a089-4d58-a9ff-c3f4c6349e4a}</SharePointProjectItemId>
     </None>
+    <Content Include="Content\corev15.css" />
+    <Content Include="Content\fabric.components.css" />
+    <Content Include="Content\fabric.components.min.css" />
+    <Content Include="Content\fabric.css" />
+    <Content Include="Content\fabric.min.css" />
+    <Content Include="Elements.xml" />
+    <None Include="Master Page\master.master" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6ed3ce78-e737-4641-873d-c0b4f942e4c7}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery-2.2.3.min.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{4ad349d9-5b8e-49f1-a4ca-2d4b60ae3b8a}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.3.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\jquery.fabric.js" />
+    <Content Include="Scripts\jquery.fabric.min.js" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +109,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
