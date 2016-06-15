@@ -8,5 +8,7 @@
     <File Path="Scripts\jquery-2.2.3.intellisense.js" Url="Scripts/jquery-2.2.3.intellisense.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery.fabric.js" Url="Scripts/jquery.fabric.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery.fabric.min.js" Url="Scripts/jquery.fabric.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery.cookie-1.4.1.min.js" Url="Scripts/jquery.cookie-1.4.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery.cookie.js" Url="Scripts/jquery.cookie.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

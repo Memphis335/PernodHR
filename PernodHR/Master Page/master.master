@@ -44,6 +44,7 @@
         <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
         <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
         <SharePoint:CustomJSUrl runat="server" />
+
         <SharePoint:SoapDiscoveryLink runat="server" />
         <link href="../Content/fabric.css" rel="stylesheet" />
         <link href="../Content/corev15.css" rel="stylesheet" />
@@ -197,10 +198,16 @@
                                 <SharePoint:SPRibbon runat="server" PlaceholderElementId="RibbonContainer" CssFile="">
 
                                     <!-- =Ribbon - Elements added to the left of the Ribbon -->
-                                    <SharePoint:SPRibbonPeripheralContent runat="server" CssClass="ms-core-defaultFont ms-dialogHidden" Location="TabRowLeft">
-                                        <ul><li><a><span>Test</span></a></li></ul>
+                                    <SharePoint:SPRibbonPeripheralContent runat="server" CssClass="" Location="TabRowLeft">
+                                        <ul class="ms-cui-tts" role="tablist">
+                                        <li class="ms-cui-tt ms-browseTab ms-cui-tt-s" role="tab" aria-selected="true" title="Back">
+                                            <a id="previousSiteUrl" class="ms-cui-tt-a">
+                                                <span class="ms-cui-tt-span">Back to previous site</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                     </SharePoint:SPRibbonPeripheralContent>
-
+                                    
                                     <!-- =Ribbon - Elements added to the right of the Ribbon -->
 
                                 </SharePoint:SPRibbon>
@@ -274,7 +281,7 @@
                                                 </SharePoint:SPTitleBreadcrumb>
                                             </asp:ContentPlaceHolder>
                                         </SharePoint:AjaxDelta>
-                                        </h1>
+                                    </h1>
                                     <!-- =SharePoint =Container - Header nav/title/description - END ms-breadcrumb-box -->
                                 </div>
 
@@ -321,17 +328,17 @@
                                             <!-- ^ =Content Placeholder - Area below Quick Launch -->
                                             <div class="ms-core-listMenu-verticalBox">
                                                 <!-- =Navigation - All Site Content -->
-                                                <a id="homeLink" href="../Pages/Default.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--home"></i> Home</a>
-                                                <a id="careerLink" href="../Pages/Career.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--chart"></i> Career Conservation</a>
-                                                <a id="treeLink" href="../Pages/DevelopmentTree.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--org"></i> Development Tree</a>
-                                                <a id="calendarLink" href="../Pages/TrainingCalendar.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--calendar"></i> Training Calendar</a>
-                                                <a id="catalogueLink" href="../Pages/Catalogue.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--page"></i> Programme Catalogue</a>
-                                                <a id="testimonialsLink" href="../Pages/Testimonials.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--group"></i> Testimonials</a>
-                                                <a id="documentsLink" href="../Pages/Documents.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--documentPDF"></i> Documents</a>
-                                                <a id="policiesLink" href="../Pages/Policies.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--story"></i> Policies</a>
-                                                <a id="Links" href="../Pages/Links.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--link"></i> Related Links</a>
-                                                <a id="lmToolsLink" href="../Pages/LMTools.aspx" class="ms-core-listMenu-item ms-core-listMenu-item-heading"><i class="ms-Icon ms-Icon--wrench"></i> Line Manager Toolkit</a>
-                                                <a id="lmTools" href="../Pages/LMTools.aspx" class="static ms-core-listMenu-item"><i class="ms-Icon ms-Icon--dot"></i> How to have a PDP Discussion</a>
+                                                <a id="homeLink" href="../Pages/Default.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--home"></i>Home</a>
+                                                <a id="careerLink" href="../Pages/Career.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--chart"></i>Career Conservation</a>
+                                                <a id="treeLink" href="../Pages/DevelopmentTree.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--org"></i>Development Tree</a>
+                                                <a id="calendarLink" href="../Pages/TrainingCalendar.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--calendar"></i>Training Calendar</a>
+                                                <a id="catalogueLink" href="../Pages/Catalogue.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--page"></i>Programme Catalogue</a>
+                                                <a id="testimonialsLink" href="../Pages/Testimonials.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--group"></i>Testimonials</a>
+                                                <a id="documentsLink" href="../Pages/Documents.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--documentPDF"></i>Documents</a>
+                                                <a id="policiesLink" href="../Pages/Policies.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--story"></i>Policies</a>
+                                                <a id="Links" href="../Pages/Links.aspx" class="ms-core-listMenu-item ms-core-listMenu-heading"><i class="ms-Icon ms-Icon--link"></i>Related Links</a>
+                                                <a id="lmToolsLink" href="../Pages/LMTools.aspx" class="ms-core-listMenu-item ms-core-listMenu-item-heading"><i class="ms-Icon ms-Icon--wrench"></i>Line Manager Toolkit</a>
+                                                <a id="lmTools" href="../Pages/LMTools.aspx" class="static ms-core-listMenu-item"><i class="ms-Icon ms-Icon--dot"></i>How to have a PDP Discussion</a>
                                             </div>
                                         </asp:ContentPlaceHolder>
                                     </div>

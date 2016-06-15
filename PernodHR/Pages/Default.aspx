@@ -18,6 +18,8 @@
     <link href="../Content/corev15.css" rel="stylesheet" />
 
     <!-- Add your JavaScript to the following file -->
+    <script src="../Scripts/jquery.cookie.js"></script>
+    <script src="../Scripts/jquery.cookie-1.4.1.min.js"></script>
     <script type="text/javascript" src="../Scripts/App.js"></script>
 </asp:Content>
 

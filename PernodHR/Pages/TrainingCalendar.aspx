@@ -5,7 +5,7 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Training Calandar
+    Training Calendar
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>

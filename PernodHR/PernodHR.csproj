@@ -91,6 +91,12 @@
     <Content Include="Pages\Documents.aspx" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="Sample List\Sample List Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3bf2442f-2c49-43fb-87e1-3c282f725434}</SharePointProjectItemId>
+    </None>
+    <None Include="Sample List\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{22c9821d-ca13-4795-b397-196e820028ed}</SharePointProjectItemId>
+    </None>
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6ed3ce78-e737-4641-873d-c0b4f942e4c7}</SharePointProjectItemId>
     </None>
@@ -105,11 +111,16 @@
     <Content Include="Pages\Policies.aspx" />
     <Content Include="Pages\Testimonials.aspx" />
     <Content Include="Pages\TrainingCalendar.aspx" />
+    <Content Include="Sample List\Elements.xml" />
+    <Content Include="Sample List\Sample List Instance\Elements.xml" />
+    <Content Include="Sample List\Schema.xml" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\jquery.cookie-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
     <Content Include="Scripts\jquery.fabric.js" />
     <Content Include="Scripts\jquery.fabric.min.js" />
     <Content Include="Scripts\_references.js" />
