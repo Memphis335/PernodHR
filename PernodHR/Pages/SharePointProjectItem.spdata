@@ -3,5 +3,15 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Pages\" Type="ElementManifest" />
     <ProjectItemFile Source="Default.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Testimonials.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Policies.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Links.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Career.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="DevelopmentTree.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="TrainingCalendar.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Documents.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="LMTools.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Catalogue.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Course.aspx" Target="Pages\" Type="ElementFile" />
   </Files>
 </ProjectItem>

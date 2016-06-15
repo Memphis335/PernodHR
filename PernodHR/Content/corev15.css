@@ -262,7 +262,8 @@ text-decoration:none;
 }
 a:hover,a:active
 {
-text-decoration:underline;
+    text-decoration: underline !important;
+    background-color: #EAEAEA;
 }
 a:active
 {

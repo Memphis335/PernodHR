@@ -2,5 +2,15 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Pages">
     <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Testimonials.aspx" Url="Pages/Testimonials.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Policies.aspx" Url="Pages/Policies.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Links.aspx" Url="Pages/Links.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Career.aspx" Url="Pages/Career.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\DevelopmentTree.aspx" Url="Pages/DevelopmentTree.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\TrainingCalendar.aspx" Url="Pages/TrainingCalendar.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Documents.aspx" Url="Pages/Documents.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\LMTools.aspx" Url="Pages/LMTools.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Catalogue.aspx" Url="Pages/Catalogue.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Course.aspx" Url="Pages/Course.aspx" ReplaceContent="TRUE" />
   </Module>
 </Elements>
